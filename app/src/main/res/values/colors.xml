@@ -12,7 +12,13 @@
     <color name="green" type="color">#FF99CC00</color>
     <color name="orange" type="color">#FFFFBB33</color>
     <color name="darkorange" type="color">#FFFF8800</color>
-    <color name="darkred" type="color">#FFCC0000</color>
+    <color name="red" type="color">#FFCC0000</color>
+    <color name="yellow" type="color">#F8DF02</color>
+    <color name="pink" type="color">#ED09D6</color>
+
+
+
+
 
     
 </resources>
