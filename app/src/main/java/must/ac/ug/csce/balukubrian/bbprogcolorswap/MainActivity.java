@@ -16,19 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//
-//        int[] colorForRandom;
-//
-//        //in the onCreate
-//        colorForRandom = new int[] {
-//                (R.color.black),
-//                (R.color.red),
-//                (R.color.yellow),
-//                (R.color.green),
-//                (R.color.purple_700),
-//                (R.color.teal_200),
-//                (R.color.teal_700),
-//        };
 
         final Button tapMebutton = findViewById(R.id.tap_me_button);
         final TextView tvChangeColor = findViewById(R.id.tvChangeColor);
@@ -36,29 +23,11 @@ public class MainActivity extends AppCompatActivity {
         tapMebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.black));
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.yellow));
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.red));
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.green));
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.teal_200));
-//                textview_Tap_to_Change_Color.setBackgroundColor(getResources().getColor(R.color.purple_700));
-//
-//                int arrayLength;
-//                arrayLength = colorForRandom.length;
-//
-//                Random randomColor = new Random();
-//                int rNum = randomColor.nextInt(arrayLength);
-//
-//                tvChangeColor.setTextColor(colorForRandom[rNum]);
 
                 tvChangeColor.setTextColor(randomColor());
                 //tvChangeColor.setText("COLOR: "+ randomColor(r)+"r"+ randomColor(g)+"g"+ randomColor(b)+"b");
-
-
             }
         });
-
-
     }
 
     /** The method randomColor uses java Random class to generate
