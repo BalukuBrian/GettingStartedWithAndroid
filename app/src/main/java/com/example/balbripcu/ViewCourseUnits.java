@@ -14,6 +14,7 @@ public class ViewCourseUnits extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_print_course_units);
 
         backBtn = findViewById(R.id.back_btn);
