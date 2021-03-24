@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textview_Tap_to_Change_Color"
+        android:id="@+id/tvChangeColor"
         android:layout_width="245dp"
         android:layout_height="50dp"
         android:text="Tap to Change Color"
