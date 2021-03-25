@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 int textfinalColor = Color.rgb(r, g, b);
 
                 tvChangeColor.setTextColor(textfinalColor);
-                tvChangeColor.setText("COLOR: "+ Integer.toString(r)+ "r, "+ Integer.toString(g)+ "g, " + Integer.toString(b)+ "b, ");
+                tvChangeColor.setText("COLOR: "+ Integer.toString(r)+ "r, "+ Integer.toString(g)+ "g, " + Integer.toString(b)+ "b");
             }
         });
     }
