@@ -24,21 +24,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                tvChangeColor.setTextColor(randomColor());
-                //tvChangeColor.setText("COLOR: "+ randomColor(r)+"r"+ randomColor(g)+"g"+ randomColor(b)+"b");
+                Random random = new Random();
+                int r = random.nextInt(255);
+                int g = random.nextInt(255);
+                int b = random.nextInt(255);
+
+                int textfinalColor = Color.rgb(r, g, b);
+
+                tvChangeColor.setTextColor(textfinalColor);
+                tvChangeColor.setText("COLOR: "+ Integer.toString(r)+ "r, "+ Integer.toString(g)+ "g, " + Integer.toString(b)+ "b, ");
             }
         });
-    }
-
-    /** The method randomColor uses java Random class to generate
-     * random value between 0 to 255 for red, blue and green values.
-     */
-
-    private int randomColor() {
-        Random random = new Random();
-        int r = random.nextInt(255);
-        int g = random.nextInt(255);
-        int b = random.nextInt(255);
-        return Color.rgb(r, g, b);
     }
 }

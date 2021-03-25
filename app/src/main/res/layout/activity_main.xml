@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/tvChangeColor"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
+        android:layout_width="352dp"
+        android:layout_height="48dp"
         android:text="Tap to Change Color"
         android:textAlignment="center"
-        android:textSize="26sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
