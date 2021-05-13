@@ -15,7 +15,7 @@ public class MyReceiver extends BroadcastReceiver {
 
         String broadcastedMessage = intent.getStringExtra("message");
 
-        if (intent.getAction().equals("must.ac.ug.csce.balukubrian.bbrianxmlcolorswap")) {
+        if (intent.getAction().equals("com.mybroadcast")) {
             // Display message
             Toast.makeText(context, ""+ broadcastedMessage ,Toast.LENGTH_LONG).show();
         }

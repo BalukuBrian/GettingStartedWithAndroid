@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvChangeColor = findViewById(R.id.tvChangeColor);
 
         //broadcast
-        intentFilter = new IntentFilter("must.ac.ug.csce.balukubrian.bbrianxmlcolorswap");
+        intentFilter = new IntentFilter("com.mybroadcast");
         MyReceiver = new MyReceiver();
         registerReceiver(MyReceiver,intentFilter);
 
