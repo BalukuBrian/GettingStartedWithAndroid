@@ -1,8 +1,7 @@
 package must.ac.ug.csce.balukubrian.bbrianxmlcolorswap;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,11 +13,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-   /* int  isZero = 0, isOne = 1, isTwo = 2, isThree = 4, isFour = 4, isFive = 5;
-    int click = 0;
-*/
-
-
+    IntentFilter intentFilter;
+    MyReceiver MyReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         final Button tapMebutton = findViewById(R.id.tap_me_button);
         final TextView tvChangeColor = findViewById(R.id.tvChangeColor);
 
+        //broadcast
+        intentFilter = new IntentFilter("must.ac.ug.csce.balukubrian.bbrianxmlcolorswap");
+        MyReceiver = new MyReceiver();
+        registerReceiver(MyReceiver,intentFilter);
+
+
+        //colors
         List<Integer> colors = new ArrayList<>();
         colors.add(getResources().getColor(R.color.red));
         colors.add(getResources().getColor(R.color.darkorange));
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         colors.add(getResources().getColor(R.color.purple_200));
         colors.add(getResources().getColor(R.color.yellow));
         colors.add(getResources().getColor(R.color.pink));
-
 
 
         tapMebutton.setOnClickListener(new View.OnClickListener() {
@@ -70,4 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
 });
-}}
+
+
+}
+
+
+
+
+
+}
