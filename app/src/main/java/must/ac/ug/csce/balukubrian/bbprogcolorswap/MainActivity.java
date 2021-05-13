@@ -2,6 +2,10 @@ package must.ac.ug.csce.balukubrian.bbprogcolorswap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +16,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button sendBroadcast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button tapMebutton = findViewById(R.id.tap_me_button);
         final TextView tvChangeColor = findViewById(R.id.tvChangeColor);
+        sendBroadcast = findViewById(R.id.sendBroadcast);
 
         tapMebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,5 +42,18 @@ public class MainActivity extends AppCompatActivity {
                 tvChangeColor.setText("COLOR: "+ Integer.toString(r)+ "r, "+ Integer.toString(g)+ "g, " + Integer.toString(b)+ "b");
             }
         });
+
+        sendBroadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String message="Sent Broadcast Message";
+                Intent intent = new Intent();
+                intent.setAction("must.ac.ug.csce.balukubrian.bbprogcolorswap");
+                intent.putExtra("message",message);
+                intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+                sendBroadcast(intent);
+            }
+        });
     }
+
 }
