@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String message="Sent Broadcast Message";
                 Intent intent = new Intent();
-                intent.setAction("must.ac.ug.csce.balukubrian.bbprogcolorswap");
+                intent.setAction("com.mybroadcast");
                 intent.putExtra("message",message);
                 intent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
                 sendBroadcast(intent);
