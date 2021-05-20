@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Room Service</string>
+    <string name="share">Share</string>
+    <string name="Show_Reservation"> Show Reservation</string>
+    <string name="choose"> No Classroom Selected </string>
+    <string name="last_day">Last Day</string>
+    <string name="choose_class_room">Choose Class Room</string>
+    <string name="next_day">Next Day</string>
+    <string name="show_reservation">Show reservation</string>
+    <string name="delete">Delete</string>
+    <string name="go_back">Go Back</string>
+    <string name="room">Room</string>
+    <string name="reservation">Reservation</string>
+    <string name="from">From</string>
+    <string name="purpose">Purpose</string>
+    <string name="to">To</string>
+    <string name="user">User</string>
+    <string name="please_log_in_to_proceed">Please Log In To Proceed</string>
+    <string name="enter_your_username_here">Enter Your Username Here</string>
+    <string name="enter_your_password_here">Enter Your Password Here</string>
+    <string name="log_in">Log In</string>
+    <string name="reservations_for_this_room">Reservations For This Room</string>
+    <string name="chicken">Chicken</string>
+    <string name="sauna">Sauna</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="wine">wine</string>
+    <string-array name="Classroom_ID">
+        <item>Classroom ID 1</item>
+        <item>Classroom ID 2</item>
+        <item>Classroom ID 3</item>
+        <item>Classroom ID 4</item>
+    </string-array>
+</resources>
