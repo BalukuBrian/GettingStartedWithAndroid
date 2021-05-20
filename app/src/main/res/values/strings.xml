@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Room Service</string>
+    <string name="app_name">Room Reservation</string>
     <string name="share">Share</string>
     <string name="Show_Reservation"> Show Reservation</string>
     <string name="choose"> No Classroom Selected </string>
@@ -24,6 +24,11 @@
     <string name="sauna">Sauna</string>
     <string name="sign_up">Sign Up</string>
     <string name="wine">wine</string>
+    <string name="details_of_notification">Details of notification</string>
+    <string name="notification">Notification</string>
+    <string name="notification_title">Data Insertion Notification</string>
+    <string name="notification_message">Data has been inserted</string>
+    <string name="data_not_inserted">Data Not  Inserted</string>
     <string-array name="Classroom_ID">
         <item>Classroom ID 1</item>
         <item>Classroom ID 2</item>

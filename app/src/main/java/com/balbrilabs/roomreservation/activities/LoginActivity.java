@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
         passwordLogin = findViewById(R.id.password_login);
 
 
+        //notification
+
+
         loginButtonLogin.setOnClickListener(v -> {
 
             String usernameLogin = this.usernameLogin.getText().toString().trim();
@@ -47,18 +50,18 @@ public class LoginActivity extends AppCompatActivity {
 
             Toast.makeText(LoginActivity.this, "Sign In Button clicked", Toast.LENGTH_SHORT).show();
 
-//            Intent intent = new Intent(getApplicationContext(), OrderService.class);
-//            startActivity(intent);
+            Intent intent = new Intent(getApplicationContext(), OrderService.class);
+            startActivity(intent);
         });
 
 
-//        signupButtonLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        signupButtonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

@@ -17,6 +17,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activities.NotificationView"
+            android:label="@string/details_of_notification"
+            android:parentActivityName=".activities.RegistrationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.RegistrationActivity"/>
+        </activity>
+
     </application>
 
 </manifest>

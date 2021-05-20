@@ -1,5 +1,8 @@
 package com.balbrilabs.roomreservation.activities;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import com.balbrilabs.roomreservation.R;
 import com.balbrilabs.roomreservation.database.Database;
@@ -35,6 +39,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         db = new Database(this);
 
+
         /* for Sign Up */
         btnsignup_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,9 +60,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 Boolean checkUserDataUpdate = db.insertUserData(formUsername, formPassword);
                 if (checkUserDataUpdate == true) {
                     Toast.makeText(RegistrationActivity.this, "Data has been Inserted", Toast.LENGTH_SHORT).show();
+                    addNotification();
 
                 } else {
                     Toast.makeText(RegistrationActivity.this, "Data not inserted", Toast.LENGTH_SHORT).show();
+                    dataNotInsertedNotification();
                 }
 
             }
@@ -75,6 +82,40 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+    }
 
+    /*notification*/
+    private void addNotification() {
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+                        .setContentTitle(getString(R.string.notification_title))
+                        .setContentText(getString(R.string.notification_message));
+
+        Intent notificationIntent = new Intent(this, RegistrationActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+
+        // Add as notification
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
+    }
+
+    private void dataNotInsertedNotification() {
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+                        .setContentTitle(getString(R.string.notification_title))
+                        .setContentText(getString(R.string.data_not_inserted));
+
+        Intent notificationIntent = new Intent(this, RegistrationActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+
+        // Add as notification
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
     }
 }
