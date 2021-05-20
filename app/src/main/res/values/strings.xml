@@ -4,7 +4,7 @@
     <string name="Show_Reservation"> Show Reservation</string>
     <string name="choose"> No Classroom Selected </string>
     <string name="last_day">Last Day</string>
-    <string name="choose_class_room">Choose Class Room</string>
+    <string name="choose_room">Choose your Room</string>
     <string name="next_day">Next Day</string>
     <string name="show_reservation">Show reservation</string>
     <string name="delete">Delete</string>
@@ -29,10 +29,10 @@
     <string name="notification_title">Data Insertion Notification</string>
     <string name="notification_message">Data has been inserted</string>
     <string name="data_not_inserted">Data Not  Inserted</string>
-    <string-array name="Classroom_ID">
-        <item>Classroom ID 1</item>
-        <item>Classroom ID 2</item>
-        <item>Classroom ID 3</item>
-        <item>Classroom ID 4</item>
+    <string-array name="room_ID">
+        <item>room ID 1</item>
+        <item>room ID 2</item>
+        <item>room ID 3</item>
+        <item>room ID 4</item>
     </string-array>
 </resources>
