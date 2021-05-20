@@ -57,8 +57,9 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
-                Boolean checkUserDataUpdate = db.insertUserData(formUsername, formPassword);
-                if (checkUserDataUpdate == true) {
+                Boolean checkUserDataInserted = db.insertUserData(formUsername, formPassword);
+
+                if (checkUserDataInserted == true) {
                     Toast.makeText(RegistrationActivity.this, "Data has been Inserted", Toast.LENGTH_SHORT).show();
                     addNotification();
 
@@ -66,6 +67,10 @@ public class RegistrationActivity extends AppCompatActivity {
                     Toast.makeText(RegistrationActivity.this, "Data not inserted", Toast.LENGTH_SHORT).show();
                     dataNotInsertedNotification();
                 }
+
+                Intent intent = new Intent(getApplicationContext(), OrderService.class);
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -75,10 +80,9 @@ public class RegistrationActivity extends AppCompatActivity {
         btnsignin_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RegistrationActivity.this, "Sign In was clicked", Toast.LENGTH_SHORT).show();
-
-//                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

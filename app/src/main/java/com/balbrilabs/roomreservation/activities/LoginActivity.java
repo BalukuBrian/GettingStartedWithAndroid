@@ -42,16 +42,20 @@ public class LoginActivity extends AppCompatActivity {
                 this.usernameLogin.setError("Username Field Required..");
                 return;
             }
-
+//
             if(TextUtils.isEmpty(passwordLogin)){
                 this.passwordLogin.setError("Password Field Required..");
                 return;
             }
 
-            Toast.makeText(LoginActivity.this, "Sign In Button clicked", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Log In Button clicked", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(getApplicationContext(), OrderService.class);
             startActivity(intent);
+            finish();
+
+
+
         });
 
 
@@ -60,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
