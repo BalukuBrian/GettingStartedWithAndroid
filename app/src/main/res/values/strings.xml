@@ -30,6 +30,7 @@
     <string name="notification_message">Data has been inserted</string>
     <string name="data_not_inserted">Data Not  Inserted</string>
     <string-array name="room_ID">
+        <item>---select your room---</item>
         <item>room ID 1</item>
         <item>room ID 2</item>
         <item>room ID 3</item>

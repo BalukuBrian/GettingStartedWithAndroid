@@ -68,6 +68,8 @@ public class RegistrationActivity extends AppCompatActivity {
                     dataNotInsertedNotification();
                 }
 
+                addNotification();
+
                 Intent intent = new Intent(getApplicationContext(), OrderService.class);
                 startActivity(intent);
                 finish();
