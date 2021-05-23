@@ -27,10 +27,11 @@ public class Database extends SQLiteOpenHelper {
 
     //inserting data into the database
     public Boolean insertUserData(String username, String password) {
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
+
 
         long result = db.insert("userdetails", null, contentValues);
 
@@ -43,7 +44,7 @@ public class Database extends SQLiteOpenHelper {
 
     //updating the database
     public Boolean updateUserData(String username, String password) {
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
